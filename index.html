@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&family=Merriweather+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 <title>I Love Pistacchio</title>
 <link rel="icon" href="immagini/icona titolo.png" type = "image/png"> 
@@ -14,8 +15,11 @@
 <body>
     <header>
     <a href="index.html"><img src="immagini/marchio i love pistacchio.png" alt="marchio"></a>
-   
+    <label for="" id="icon">
+        <i class='bx bx-menu'></i>
+    </label>
           <nav class="navbar">
+   
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="pistacchio.html">PISTACCHIO</a></li>
@@ -25,13 +29,41 @@
             <li><a href="omeopatia.html">OMEOPATIA</a></li>
             <li><a href="eventi.html">EVENTI</a></li>
         </ul>
+        
     </nav>
+    
+    <ul id="menu" class="hidden">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="pistacchio.html">PISTACCHIO</a></li>
+            <li><a href="marchiodop.html">MARCHIO D.O.P.</a></li>
+            <li><a href="piatticonsigliati.html">PIATTI CONSIGLIATI</a></li>
+            <li><a href="cosmetica.html">COSMETICA</a></li>
+            <li><a href="omeopatia.html">OMEOPATIA</a></li>
+            <li><a href="eventi.html">EVENTI</a></li>
+        </ul>
+        <script>
+            const icon = document.getElementById("icon");
+            const menu = document.getElementById("menu");
+           
+            icon.addEventListener("click", () => {
+            
+            const hidden = menu.classList.contains("hidden");
+            
+             if (hidden) {
+                 menu.classList.remove("hidden");
+            } else {
+                 menu.classList.add("hidden");
+            }
+            });
+        </script>
 </header>
 <section class="container-grid">
     <div class="container">
-    <img class="item-img-grid immagine" src="immagini/28.jpg">
-    <h1 class="item-h-grid">L’ORO VERDE DI QUALITÀ</h1>
-    <p class="item-p-grid paragrafi">Benvenuti, amanti del pistacchio!  Siete qui per trovare notizie e conoscere di più riguardo l’oro verde siciliano? Allora siete nel posto giusto!</p>
+        <img class="item-img-grid immagine" src="immagini/28.jpg">
+        <div class="item-grid">
+            <h1 class="item-h-grid">L’ORO VERDE DI QUALITÀ</h1>
+            <p class="item-p-grid paragrafi">Benvenuti, amanti del pistacchio!  Siete qui per trovare notizie e conoscere di più riguardo l’oro verde siciliano? Allora siete nel posto giusto!</p>
+        </div>
     </div>
 </section>  
 <main>

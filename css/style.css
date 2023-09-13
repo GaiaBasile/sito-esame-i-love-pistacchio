@@ -22,6 +22,16 @@ header img{
     left: 2%;
 }
 
+
+#icon{ 
+    font-size: 2.8rem;
+    color: #DABA84;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    right: 0;
+}
+
 nav ul {
     margin: 0;
     list-style-type: none;
@@ -48,7 +58,10 @@ nav ul li a{
 
 header a:hover {
     color: #DABA84;
+    background-color: #614666;
     text-decoration: underline;
+    transition: .5s;
+
 }
 
 footer{
@@ -118,6 +131,13 @@ footer{
 
 .container{
     margin: auto;
+    position: relative;
+}
+
+.item-grid{
+    position: absolute;
+    left:80%;
+    top: 50%;
 }
 
 .container-grid h1{
@@ -127,12 +147,7 @@ footer{
     font-style: normal;
     font-weight: 700;
     line-height: 26px; /* 92.857% */
-    max-width: 442px;
-    max-height: 142px;
     flex-shrink: 0;
-    position: absolute;
-    left:80%;
-    top: 95%;
     transform:translate(-50%);
     margin: auto;
 }
@@ -146,12 +161,7 @@ footer{
     font-weight: 400;
     line-height: 150%; /* 36px */
     letter-spacing: -0.456px;
-    max-width: 442px;
-    max-height: 142px;
     flex-shrink: 0;
-    position: absolute;
-    left:80%;
-    top: 100%;
     transform:translate(-50%);
     margin: auto;
 }
@@ -165,8 +175,8 @@ footer{
     background-color: #221D23;
     color: #ffff;
     border-radius: 12px;
-    max-width: 305px;
-    max-height: 56px;
+    width: 305px;
+    height: 65px;
     flex-shrink: 0;
     color: #FFF;
     text-align: center;
@@ -183,7 +193,7 @@ footer{
 
 .card h1{
     color: #221D23;
-    width: 770px;
+    max-width: 770px;
     font-family: Merriweather Sans;
     font-size: 36px;
     font-style: normal;
@@ -228,6 +238,7 @@ a:link {
 
 .card{
     margin: auto;
+    margin-right: 15%;
     margin-left: 15%;
     margin-top:20%;
     margin-bottom: 10%;
@@ -241,7 +252,7 @@ a:link {
 }
 
 .card img{ 
-    max-width: 1117px;
+   
     height: auto;
     margin: auto;
     margin-top: 5%;
@@ -377,6 +388,8 @@ a:link {
     font-family: Merriweather Sans;
     font-size: 36px;
     font-style: normal;
+    max-width: 904px;
+    max-height: auto;
     font-weight: 700;
     line-height: 150%; /* 54px */
     letter-spacing: -0.684px;
@@ -392,6 +405,7 @@ a:link {
     line-height: 150%; /* 36px */
     letter-spacing: -0.456px;
     flex-shrink: 0;
+    max-width: 807px;
    }
 
 .intro{
@@ -454,14 +468,53 @@ a:link {
     width: 75%;
 }
 
-@media (max-width: 720px) {
+.hidden{
+    display: none;
+}
 
+
+#menu {
+    margin: 0;
+    list-style-type: none;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    gap: 1.5vw;
+    text-decoration: none;
+    text-align: center;
+    z-index: 1;
+}
+#menu li a{
+    color: #DABA84;
+    text-align: center;
+    font-family: Merriweather Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 300;
+    white-space: nowrap;
+    line-height: normal;
+    text-decoration: underline;
+}
+
+@media (max-width: 720px) {
+    #icon{ 
+        display: inline-flex;
+    }
+    .navbar{
+        display: none;
+    }
     .row{
         display: block;
     }          
     .intro p {
         width: auto;
     }
+
+    .card-container{
+        width: 75%;
+        height: auto;
+        margin-left: 15%;
+        margin-top: 15%;}
 
     .column img {
         width: 75%;
@@ -480,10 +533,7 @@ a:link {
        width: auto;
        margin:15%;
     }
-    nav ul li {
-        display: flex;
-        flex-direction: column;
-    }
+
     .container-salato .row{ 
         display: block;
     }
@@ -498,13 +548,33 @@ a:link {
     .linea3 {
         margin: 8%;
     }
-}
-
-@media (max-width: 930px) {
-
-    nav ul li a{
-        font-size: 10px;     
+    .bottone{  
+        width: 152.5px;
+        height: 32.5px;
+        font-size: 12px;
     }
-
 }
+
+@media (max-width: 960px) {
+
+nav ul li a{
+    font-size: 10px;
+}
+
+.container-grid h1{
+    font-size: 18px;    
+}
+
+.container-grid p{   
+    font-size: 14px;    
+}
+}
+
+@media screen and (min-width: 768px) {
+    #menu {
+      display: none;
+    }
+  }
+  
+
 
