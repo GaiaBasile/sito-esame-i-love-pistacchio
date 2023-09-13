@@ -477,13 +477,19 @@ a:link {
     margin: 0;
     list-style-type: none;
     position: absolute;
-    top: 5%;
-    right: 3%;
+    top: 6%;
+    right: 0;
     gap: 1.5vw;
     text-decoration: none;
     text-align: center;
     z-index: 1;
+    background: #302932;
+    width: 30%;
+    height: 27%;
+    border-radius: 6px;
+    
 }
+
 #menu li a{
     color: #DABA84;
     text-align: center;
@@ -491,9 +497,11 @@ a:link {
     font-size: 15px;
     font-style: normal;
     font-weight: 300;
+    margin: auto;
     white-space: nowrap;
     line-height: normal;
-    text-decoration: underline;
+    text-decoration:none;
+    
 }
 
 @media (max-width: 720px) {
@@ -503,6 +511,7 @@ a:link {
     .navbar{
         display: none;
     }
+   
     .row{
         display: block;
     }          
